@@ -1,0 +1,151 @@
+<svg height="500" width="500"
+  xmlns="http://www.w3.org/2000/svg">
+
+<style type="text/css">
+  #outline{
+  stroke-width:3;
+  stroke: black;
+  fill: none
+  }
+  #gridlines{
+    stroke: black;
+    stroke-width: 3;
+  }
+  #diags{
+    stroke: black;
+    stroke-width: 2;
+  }
+  #markers1{
+    stroke: black;
+    stroke-width: 2;
+  }
+  #markers2{
+    stroke: black;
+    stroke-width: 2;
+  }
+  #title {
+  font-weight: bold;
+  font-size: 1.75em;
+  fill: black;
+  font-family="Arial";
+  }
+  #markerlabel{
+  font-size: 0.85em;
+  fill: black;
+  }
+  #axislabel{
+  font-size: 1.25em;
+  fill: black;
+  }
+  #group{
+  font-size: 1.5em;
+  font-weight: bold;
+  fill: crimson;
+  }
+  #actual{
+  font-size: 1.25em;
+  fill: #66435a;
+  opacity: 0.9;
+  }
+  #preferred{
+  font-size: 1.25em;
+  fill: crimson;
+  opacity: 0.99;
+  }
+  #legend{
+  font-size: .75em;
+  font-weight: bold;
+  }
+</style>
+
+<rect id="outline" width="300" height="300" x="50" y="50"/>
+
+<g id="gridlines">
+  <line x1="200" y1="50" x2="200" y2="350"/>
+  <line x1="50" y1="200" x2="350" y2="200"/>
+</g>
+
+<g id="diags">
+  <line x1="50" y1="50" x2="350" y2="350"/>
+  <line x1="350" y1="50" x2="50" y2="350"/>
+</g>
+
+<g id="markers1">
+  <line x1="220" y1="230" x2="240" y2="230"/>
+</g>
+<use href="#markers1"  x="30" y="30" />
+<use href="#markers1"  x="60" y="60" />
+<use href="#markers1"  x="90" y="90" />
+<use href="#markers1"  x="-60" y="-60" />
+<use href="#markers1"  x="-90" y="-90" />
+<use href="#markers1"  x="-120" y="-120" />
+<use href="#markers1"  x="-150" y="-150" />
+
+<g id="markers2">
+  <line x1="160" y1="230" x2="180" y2="230"/>
+</g>
+<use href="#markers2"  x="-30" y="30" />
+<use href="#markers2"  x="-60" y="60" />
+<use href="#markers2"  x="-90" y="90" />
+<use href="#markers2"  x="60" y="-60" />
+<use href="#markers2"  x="90" y="-90" />
+<use href="#markers2"  x="120" y="-120" />
+<use href="#markers2"  x="150" y="-150" />
+
+<g id="markerlabel">
+  <!-- bottom right -->
+  <text x="245" y="233">20</text>
+  <text x="275" y="263">40</text>
+  <text x="305" y="293">60</text>
+  <text x="335" y="323">80</text>
+
+  <!-- top right -->
+  <text x="245" y="173">20</text>
+  <text x="275" y="143">40</text>
+  <text x="305" y="113">60</text>
+  <text x="335" y="83">80</text>
+
+  <!-- bottom left -->
+  <text x="145" y="233">20</text>
+  <text x="115" y="263">40</text>
+  <text x="85" y="293">60</text>
+  <text x="55" y="323">80</text>
+
+  <!-- top left -->
+  <text x="145" y="173">20</text>
+  <text x="115" y="143">40</text>
+  <text x="85" y="113">60</text>
+  <text x="55" y="83">80</text>
+</g>
+
+<text id="title" x="80" y="20"> KSB Competing Values </text>
+
+<g id="axislabel">
+    <text x="170" y="45">Flexibility</text>
+    <text x="182" y="365">Focus</text>
+    <text x="45" y="220" transform="rotate(270, 45, 220)">Internal</text>
+    <text x="355" y="170" transform="rotate(90, 355, 170)">External</text>
+    <text x="60" y="195">A</text>
+    <text x="60" y="215">D</text>
+    <text x="330" y="195">B</text>
+    <text x="330" y="215">C</text>
+  </g>
+
+  <g id="group">
+      <text x="35" y="60" transform="rotate(315, 35, 60)">Clan</text>
+      <text x="25" y="330" transform="rotate(45, 15, 320)">Hierachy</text>
+      <text x="325" y="17" transform="rotate(45, 325, 17)">Adhocracy</text>
+      <text x="345" y="380" transform="rotate(315, 345, 380)">Market</text>
+  </g>
+<!--future/preferred values -->
+<polygon id="preferred" points="160.1 160.1, 157.55 242.45, 231.245 231.245, 236.24 163.76"/>
+
+<!-- present values -->
+<polygon id="actual" points="193.75 193.75, 153.755 246.245, 271.25 271.25, 226.25 173.75"/>
+
+<g id="legend">
+    <text x="180" y="415" style="fill: crimson;">Preferred</text>
+    <text x="190" y="402" style="fill: #66435a;">Now</text>
+    <rect width="70" height="30" x="165" y="390" style="stroke: black; stroke-width: 2; fill: none;"/>
+</g>
+</svg>
